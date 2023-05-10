@@ -1,0 +1,9 @@
+- name: Terminate Instances
+  hosts: localhost
+  tasks:
+    - name: Terminate Instances that were Previously created
+      ec2:
+	State: absent
+	region: ap-south-1
+	intance_ids: i-055a88ef4a4122fb0
+	       

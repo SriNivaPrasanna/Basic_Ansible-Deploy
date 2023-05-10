@@ -1,0 +1,13 @@
+ ### Launch Basic EC2 Instance in Mumbai Region
+ - name: Ansible Playbook
+   hosts: localhosts
+   tasks:
+   - name: launching Aws Instance using Ansible
+   
+     ec2:
+       key_name: 
+       region: ap-south-1
+       instance_type: t2.micro
+       image: ami-02eb7a4783e7e9317
+       instance_tags:
+	 Name: Demo_server

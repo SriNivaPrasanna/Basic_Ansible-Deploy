@@ -1,0 +1,9 @@
+- name: Stop Instances
+    hosts: localhost
+    tasks:
+      - name: Stop Instances that were Previously launched
+        ec2:
+	  State: stopped
+	  region: ap-south-1
+	  instance_tags:
+	     Name: Demo_server		 
